@@ -1,8 +1,8 @@
 
-
 # ChatApp
 
-ChatApp is a real-time chat application that allows users to communicate with each other instantly. This project is built using Python and web technologies to provide a seamless and interactive chatting experience.
+
+ChatApp is a real-time chat application that allows users to communicate with each other instantly. This project is built using JavaScript technologies to provide a seamless and interactive chatting experience.
 
 ## Features
 
@@ -15,20 +15,19 @@ ChatApp is a real-time chat application that allows users to communicate with ea
 
 ## Technologies Used
 
-- Python
-- Flask (or Django)
-- JavaScript (React, Vue.js, or vanilla JS)
-- WebSocket for real-time communication
+- Node.js
+- Express.js
+- Socket.io for real-time communication
+- MongoDB (or any other NoSQL/SQL database)
+- JavaScript (React, Vue.js, or vanilla JS for frontend)
 - HTML5 & CSS3
-- SQLite/PostgreSQL/MySQL (depending on your database choice)
 
 ## Installation
 
 ### Prerequisites
 
-- Python 3.x
-- Virtualenv
-- Node.js and npm (if using a frontend framework like React or Vue.js)
+- Node.js and npm
+- MongoDB (or any other preferred database)
 - Git
 
 ### Clone the Repository
@@ -40,39 +39,26 @@ cd ChatApp
 
 ### Setting Up the Backend
 
-1. **Create a virtual environment:**
+1. **Install backend dependencies:**
 
    ```bash
-   python -m venv venv
+   npm install
    ```
 
-2. **Activate the virtual environment:**
+2. **Configure environment variables:**
 
-   - On Windows:
-     ```bash
-     venv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source venv/bin/activate
-     ```
+   Create a `.env` file in the root directory and add your configuration. For example:
 
-3. **Install dependencies:**
-
-   ```bash
-   pip install -r requirements.txt
+   ```plaintext
+   PORT=5000
+   MONGODB_URI=mongodb://localhost:27017/chatapp
+   JWT_SECRET=your_jwt_secret
    ```
 
-4. **Run database migrations:**
+3. **Start the backend server:**
 
    ```bash
-   flask db upgrade  # If using Flask-Migrate
-   ```
-
-5. **Start the backend server:**
-
-   ```bash
-   flask run
+   npm run server
    ```
 
 ### Setting Up the Frontend
@@ -105,12 +91,32 @@ cd ChatApp
 1. **Open your web browser and go to:**
 
    ```
-   http://localhost:5000
+   http://localhost:3000
    ```
 
 2. **Register a new user or log in with an existing account.**
 
 3. **Start chatting with other users!**
+
+## Folder Structure
+
+```
+ChatApp/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   ├── server.js
+│   └── .env
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── ...
+├── package.json
+└── README.md
+```
 
 ## Contributing
 
