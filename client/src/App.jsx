@@ -4,7 +4,7 @@ import Routes from './Routes.jsx';
 const dotenv = require('dotenv');
 
 function App() {
-  axios.defaults.baseURL = {`${}`};  // Correct backend URL
+  axios.defaults.baseURL = {`${backend_URL}`};  // Correct backend URL
   axios.defaults.withCredentials = true;
 
   return (
