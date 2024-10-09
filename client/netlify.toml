@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/*.js" # or adjust the path as necessary
+  [headers.values]
+    Content-Type = "application/javascript"
