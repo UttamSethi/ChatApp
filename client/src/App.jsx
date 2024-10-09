@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { UserContextProvider } from './UserContext.jsx';
 import Routes from './Routes.jsx';
+const dotenv = require('dotenv');
 
 function App() {
-  axios.defaults.baseURL = 'http://localhost:4000';  // Correct backend URL
+  axios.defaults.baseURL = {`${}`};  // Correct backend URL
   axios.defaults.withCredentials = true;
 
   return (
