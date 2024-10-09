@@ -30,8 +30,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   credentials: true,
-  origin: process.env.CLIENT_URL,
-}));
+  origin: [process.env.CLIENT_URL,'http://localhost:5173'
+]}));
 async function getUserDataFromRequest(req) {
 
   return new Promise((resolve, reject) => {
