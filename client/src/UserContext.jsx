@@ -19,7 +19,3 @@ export function UserContextProvider({children}) {
     </UserContext.Provider>
   );
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> df1961a882b3f977cbe141d7bd0ff0e09a7beb07
